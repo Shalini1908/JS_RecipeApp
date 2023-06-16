@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Recipe Management</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <h1>Recipe Management</h1>
+
+    <div id="recipeForm">
+      <h2>Add Recipe</h2>
+      <input type="text" id="recipeName" placeholder="Name" />
+      <input type="text" id="recipeType" placeholder="Type" />
+      <textarea id="recipeDescription" placeholder="Description"></textarea>
+      <br />
+      <button onclick="addRecipe()">Add Recipe</button>
+    </div>
+
+    <div id="heading">
+      <h1>Recipes</h1>
+    </div>
+
+    <div id="recipeItems"></div>
+  </body>
+</html>
+<script src="index.js"></script>

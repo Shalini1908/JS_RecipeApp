@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+
+  width: 100vw;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+
+#recipeForm {
+  width: 400px;
+  height: 400px;
+
+  padding: 10px 10px;
+  margin:auto;
+  margin-top: 5%;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+}
+
+input {
+  width: 350px;
+  height: 20px;
+  margin: 20px 50px;
+  padding: 10px 10px;
+  border: 2px solid green;
+
+
+}
+
+input::placeholder {
+  color:black;
+  font-size: 18px;
+}
+
+textarea {
+  width: 350px;
+  height: 55px;
+ border: 2px solid green;
+  margin: 20px 50px;
+  padding: 10px 10px;
+
+}
+
+textarea::placeholder {
+  color:black;
+  font-size: 18px;
+}
+
+button {
+  width: 200px;
+  border: none;
+  background-color: #2b3a85;
+  font-size: 18px;
+  color:white;
+  border-radius: 10px;
+  height: 55px;
+  margin-left: 36%;
+  margin-top: 40px;
+  font-weight: 600;
+}
+
+#heading {
+  margin: auto;
+  margin-top: 70px;
+}
+
+#heading h2 {
+  text-align: center;
+}
+
+#recipeItems {
+  margin: auto;
+
+  height: auto;
+  display: grid;
+ margin-top: 30px;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
