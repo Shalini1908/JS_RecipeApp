@@ -1,9 +1,9 @@
 {
   "recipes": [
     {
-      "name": "brownie",
-      "type": "dessert",
-      "description": "home made brownnies",
+      "name": "chicken",
+      "type": "meal",
+      "description": "non-veg",
       "id": 1
     }
   ]

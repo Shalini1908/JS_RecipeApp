@@ -2,13 +2,13 @@ const BASE_URL = "http://localhost:8080";
 
 // Function to fetch recipes from the JSON Server
 async function fetchRecipes() {
-  const response = await fetch(`${BASE_URL}/recipes`);
-  const recipes = await response.json();
+  const res = await fetch(`${BASE_URL}/recipes`);
+  const recipes = await res.json();
   return recipes;
 }
 
 // Function to add a new recipe
-async function addRecipe() {
+const addRecipe = async()=>{
   const recipeName = document.getElementById("recipeName").value;
   const recipeType = document.getElementById("recipeType").value;
   const recipeDescription = document.getElementById("recipeDescription").value;
@@ -24,7 +24,7 @@ async function addRecipe() {
     description: recipeDescription,
   };
 
-  const response = await fetch(`${BASE_URL}/recipes`, {
+  const res = await fetch(`${BASE_URL}/recipes`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -32,7 +32,7 @@ async function addRecipe() {
     body: JSON.stringify(newRecipe),
   });
 
-  if (response.ok) {
+  if (res.ok) {
     alert("Recipe added successfully!");
     clearForm();
     loadRecipes();
@@ -42,12 +42,12 @@ async function addRecipe() {
 }
 
 // Function to delete a recipe
-async function deleteRecipe(recipeId) {
-  const response = await fetch(`${BASE_URL}/recipes/${recipeId}`, {
+const deleteRecipe = async(recipeId)=>{
+  const res = await fetch(`${BASE_URL}/recipes/${recipeId}`, {
     method: "DELETE",
   });
 
-  if (response.ok) {
+  if (res.ok) {
     alert("Recipe deleted successfully!");
     loadRecipes();
   } else {
@@ -55,7 +55,7 @@ async function deleteRecipe(recipeId) {
   }
 }
 
-async function loadRecipes() {
+const loadRecipes = async()=> {
   const recipes = await fetchRecipes();
   const recipeItems = document.getElementById("recipeItems");
   recipeItems.innerHTML = "";
@@ -136,7 +136,7 @@ async function loadRecipes() {
 }
 
 // Function to update the recipe name , type and description
-async function updaterecipe(id) {
+const updaterecipe = async(id)=> {
   const newName = window.prompt("Enter new name for the recipe");
   const newType = window.prompt("Enter new type for the recipe");
   const newDescription = window.prompt("Enter new description for the recipe");
@@ -177,3 +177,5 @@ function clearForm() {
 window.onload = function () {
   loadRecipes();
 };
+
+
